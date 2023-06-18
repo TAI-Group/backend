@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package boost_gateway;
+
+
+option go_package = "/boost-gateway";
+
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+	info: {
+		title: "API";
+		version: "1";
+		contact: {
+			name: "";
+			url:  "your url";
+			email: "email url";
+		};
+	};
+};
