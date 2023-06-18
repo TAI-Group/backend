@@ -1,0 +1,21 @@
+syntax = "proto3";
+package ai_service;
+option go_package="ai_service";
+
+message GptRequest {
+	string content = 1;
+	string model = 2;
+};
+
+message GptResponse {
+	repeated GptResponseData data = 1;
+};
+
+message GptResponseData {
+	string message = 1;
+	string author = 2;
+};
+
+service AIService {
+	rpc Echo(GptRequest) returns (GptResponse);
+};
