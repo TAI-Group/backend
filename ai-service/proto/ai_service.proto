@@ -1,6 +1,6 @@
 syntax = "proto3";
 package ai_service;
-option go_package="ai_service";
+option go_package="./ai_service";
 
 message GptRequest {
 	string content = 1;
